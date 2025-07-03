@@ -1,0 +1,80 @@
+/* General buttons */
+button {
+  margin-top: 8px;
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.start {
+  background-color: #388e3c;
+  color: white;
+}
+
+button.disconnect {
+  background-color: #d32f2f;
+  color: white;
+}
+
+/* Map styling */
+#map {
+  height: 500px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}
+
+/* User list */
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#map {
+  height: 500px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button.start {
+  padding: 8px 16px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.disconnect {
+  padding: 8px 16px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-list li div {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-left: 5px solid #2196f3;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.user-list li div:hover {
+  background-color: #f0f8ff;
+  transform: scale(1.02);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
