@@ -9,7 +9,8 @@ export class SocketService {
   private socket: Socket;
 
   constructor() {
-    this.socket = io('http://localhost:3000');
+    // 👇 Live backend URL deployed on Vercel
+    this.socket = io('https://angular-socket-location-tracker-n5t.vercel.app');
   }
 
   sendLocation(data: { coords: { lat: number; lng: number }; name: string }) {
@@ -34,20 +35,19 @@ export class SocketService {
     });
   }
 
-  // ✅ NEW: Listen for user count updates
   getUserCount(): Observable<number> {
     return new Observable((observer) => {
       this.socket.on('users-count', (count: number) => observer.next(count));
     });
   }
-getAllUsers(): Observable<{ id: string, name: string, timestamp?: string }[]> {
-  return new Observable(observer => {
-    this.socket.on('users-list', (users) => observer.next(users));
-  });
-}
-  disconnect(): void {
-  this.socket.disconnect();
- }
 
+  getAllUsers(): Observable<{ id: string; name: string; timestamp?: string }[]> {
+    return new Observable((observer) => {
+      this.socket.on('users-list', (users) => observer.next(users));
+    });
+  }
+
+  disconnect(): void {
+    this.socket.disconnect();
+  }
 }
-  
