@@ -1,16 +1,17 @@
 <h2 style="text-align: center;">📍 Realtime Map Location</h2>
 
-<!-- 🔷 My Info (Centered) -->
+
 <div style="text-align: center; margin-bottom: 10px;">
   <p><strong>👤 {{ userName }}</strong></p>
   <p>🆔 <code>{{ mySocketId }}</code></p>
 </div>
 
-<!-- 🔘 Control Buttons -->
+
 <div style="text-align: center; margin-bottom: 15px;">
   <button class="start" (click)="startTracking()">Start Sharing Location</button>
   <button class="disconnect" (click)="disconnectUser()" style="margin-left: 10px;">Disconnect</button>
 </div>
+
 
 <!-- 🗺️ Map -->
 <div id="map"></div>
